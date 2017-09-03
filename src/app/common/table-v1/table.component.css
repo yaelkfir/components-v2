@@ -1,0 +1,71 @@
+
+td{
+  display:table-cell;
+  vertical-align:top;
+  width: 200px;
+  /*transform: tra;*/
+  /*transform: translateX(200px);*/
+}
+th{
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: 0px;
+  margin: 1px;
+  height: 42px;
+  width: 148px;
+  background-color: rgba(255,255,255,0.9);
+  padding: 10px;
+  z-index: 100;
+}
+tr{
+  height: 30px;
+  /*background-color: rgba(0,0,0,0.5);*/
+  /*background-color: rgba(68, 69, 75, 0.2);*/
+
+  position: relative;
+}
+tr td{
+  background-color: rgba(68, 69, 75, 0.2);
+}
+table{
+  /*background:rgba(204, 204, 204, 0.19);*/
+
+}
+table:after{
+  content: '';
+  position: absolute;
+  width: 150px;
+
+}
+table tbody{
+  display:block;
+  /*height:200px;*/
+  /*overflow:auto*/
+}
+.cell{
+  /*overflow: auto;*/
+  display: block;
+  height: 100%;
+  width: 200px;
+}
+
+.truncate {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-container{
+  /*position: fixed;*/
+  /*overflow: auto;*/
+  /*width: calc( 100% - 200px );*/
+  overflow-x: auto;
+  overflow-y: auto;
+  /*position: absolute;*/
+  /*left:0;*/
+  /*right: 0;*/
+  /*top:0;*/
+  /*transform: translateX(200px);*/
+}

@@ -1,0 +1,25 @@
+<div class="view"  *ngIf="key.keyName && obj">
+  <div *ngIf="!edit">
+      <div class="img {{key['keyClass']}}"
+           *ngIf="key.keyClass.includes('img') && obj"
+           [ngStyle]="{'background-image': 'url(' + getMyData(key,obj) + ')'}">
+      </div>
+    <!--[ngStyle]="{'background-image': 'url(' + getMyData(key,obj) + ')'}">-->
+    <span (click)="log()" class="truncate">{{getMyData(key,obj)}}</span>
+</div>
+
+<form [formGroup]="editor" *ngIf="edit" class="{{key.keyClass}}">
+  <input *ngIf=" key.input !== 'select' && key.input !== 'textarea' "
+         [type]="key.input"
+         formControlName="value"
+         (click)="log()">
+  <textarea *ngIf="key.input === 'textarea'"
+            formControlName="value"
+            (click)="log()"
+  ></textarea>
+  <select *ngIf="key.input === 'select' && key.options && key.options.length > 0" formControlName="value"
+          (click)="log()">
+    <option *ngFor="let data of key.options" [value]="data.boolean">{{data.text}}</option>
+  </select>
+</form>
+</div>
