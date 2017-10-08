@@ -17,7 +17,7 @@ body{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #b6b3bc;
+  /*background-color: #b6b3bc;*/
 }
 
 .table.img.poster{
@@ -28,6 +28,22 @@ body{
 .table.img.backdrop{
   width: 200px;
   height: 113px;
+}
+
+/*.master-table{*/
+  /*position: absolute;*/
+  /*top:0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+
+  /*overflow: auto;*/
+/*}*/
+
+.table-container{
+  overflow: auto;
+  background-color: #e5e6ef;
+
 }
 
 /*.table.overview{*/

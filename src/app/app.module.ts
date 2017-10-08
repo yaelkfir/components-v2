@@ -16,6 +16,7 @@ import {SearchService} from 'app/service/movie.service';
 import {TableComponent} from './common/table-v1/table.component';
 import {TableDataComponent} from './common/table-v1/table-cell/table-data.component';
 import {MasterTableService} from './costume-masters/master-table/master-table.service';
+import {MasterOfTwoInputsModule} from "./master-of-two-inputs/master-of-two-inputs.module";
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import {MasterTableService} from './costume-masters/master-table/master-table.se
     NavComponent,
     MasterTableComponent,
     TableComponent,
-    TableDataComponent
+    TableDataComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +34,7 @@ import {MasterTableService} from './costume-masters/master-table/master-table.se
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
+    MasterOfTwoInputsModule
   ],
   providers: [
     SearchService,

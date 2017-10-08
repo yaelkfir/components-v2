@@ -66,7 +66,6 @@ export class MovieModel {
   }
 
   newMovie(obj: Object) {
-
     const isObject = obj.hasOwnProperty('id');
     Object.assign(this, this.empty());
     isObject === true ? Object.assign(this, obj) : Object.assign(this, this.empty());

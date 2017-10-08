@@ -3,6 +3,7 @@ td{
   display:table-cell;
   vertical-align:top;
   width: 200px;
+  /*transform: translateX(150px);*/
   /*transform: tra;*/
   /*transform: translateX(200px);*/
 }
@@ -11,12 +12,13 @@ th{
   top: auto;
   bottom: auto;
   left: 0px;
-  margin: 1px;
-  height: 42px;
-  width: 148px;
-  background-color: rgba(255,255,255,0.9);
+  height: 44px;
+  width: 150px;
+  background-color: rgba(229, 230, 239, 0.9);
   padding: 10px;
   z-index: 100;
+  /*box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/
+
 }
 tr{
   height: 30px;
@@ -26,7 +28,6 @@ tr{
   position: relative;
 }
 tr td{
-  background-color: rgba(68, 69, 75, 0.2);
 }
 table{
   /*background:rgba(204, 204, 204, 0.19);*/
@@ -44,10 +45,12 @@ table tbody{
   /*overflow:auto*/
 }
 .cell{
-  /*overflow: auto;*/
   display: block;
   height: 100%;
   width: 200px;
+  margin: 0;
+  /*background-color: azure;*/
+  transform: translateX(150px);
 }
 
 .truncate {
@@ -57,15 +60,4 @@ table tbody{
   text-overflow: ellipsis;
 }
 
-.table-container{
-  /*position: fixed;*/
-  /*overflow: auto;*/
-  /*width: calc( 100% - 200px );*/
-  overflow-x: auto;
-  overflow-y: auto;
-  /*position: absolute;*/
-  /*left:0;*/
-  /*right: 0;*/
-  /*top:0;*/
-  /*transform: translateX(200px);*/
-}
+
