@@ -1,0 +1,11 @@
+<p>
+  full-name-inputs works!
+</p>
+<app-common-text-input
+  (strValue)="handelInputs($event, 'one')"
+  [label]="'input one'"></app-common-text-input>
+<app-common-text-input
+  (strValue)="handelInputs($event , 'two')"
+  [label]="'input two'"></app-common-text-input>
+
+<span *ngIf="twoInputsValue !== 'undefined'">{{twoInputsValue}}</span>
