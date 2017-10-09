@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Validators, FormGroup, FormArray, FormBuilder} from '@angular/forms';
 import 'rxjs/Rx';
-import {SearchService} from '../../service/movie.service';
+import {Api} from '../../service/api.service';
 import {MovieModel} from '../models/movieModel';
 
 @Component({
@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit {
   private resCount: number;
 
   constructor(private _fb: FormBuilder,
-              private _searchService: SearchService) {
+              private _searchService: Api) {
   }
 
 
@@ -75,7 +75,6 @@ export class SearchComponent implements OnInit {
 
   getRes() {
     return this._searchService.getMovies(this.query).map((data) => {
-      console.info(data);
       return data['results'].filter(res => {
         if (res['genre_ids'].length > 0) {
           return res

@@ -2,11 +2,24 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'
 
+export interface Filter {
+  method: String,
+  library: String
+  offset?: number,
+}
+
+export interface MovieFilter extends Filter{
+  query?: String,
+}
+
 @Injectable()
-export class SearchService {
+
+export class Api {
+
   key = '8670e251a142060248918513c31bfb34';
   movieUrl= `https://api.themoviedb.org/3`;
   imgUrl= 'http://image.tmdb.org/t/p/w300';
+
   constructor(private http: Http) {}
 
 

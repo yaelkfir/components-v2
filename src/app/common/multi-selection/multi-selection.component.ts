@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {Validators, FormGroup, FormArray, FormBuilder} from '@angular/forms';
 import {MovieModel} from 'app/common/models/movieModel';
-import {SearchService} from 'app/service/movie.service';
+import {Api} from 'app/service/api.service';
 
 
 @Component({
@@ -29,7 +29,7 @@ export class MultiSelectionComponent implements OnInit, OnChanges {
 
 
   constructor(private _fb: FormBuilder,
-              private _searchService: SearchService) {
+              private _searchService: Api) {
   }
 
 

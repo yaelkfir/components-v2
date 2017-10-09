@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {KeyModel} from '../../common/table-v1/keyModel';
-import {SearchService} from '../../service/movie.service';
+import {Api} from '../../service/api.service';
 
 @Injectable()
 export class MasterTableService {
   keys: KeyModel[] = [];
 
-  constructor(private _api: SearchService ) {
+  constructor(private _api: Api ) {
   }
 
   logThis() {

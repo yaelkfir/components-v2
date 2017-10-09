@@ -2,7 +2,7 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 import {KeyModel} from '../keyModel';
 import {MovieModel} from '../../models/movieModel';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {SearchService} from '../../../service/movie.service';
+import {Api} from '../../../service/api.service';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class TableDataComponent implements OnInit {
   public editor: FormGroup;
 
   constructor(private _fb: FormBuilder,
-              private _api: SearchService) {
+              private _api: Api) {
   }
 
   ngOnInit() {

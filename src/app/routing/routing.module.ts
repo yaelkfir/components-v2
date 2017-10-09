@@ -32,11 +32,11 @@ const routes: Routes = [
   //   component: MyFormComponent,
   //   pathMatch: 'full'
   // },
-  {
-    path: 'mTable',
-    component: MasterTableComponent,
-    pathMatch: 'full'
-  },
+  // {
+  //   path: 'mTable',
+  //   component: MasterTableComponent,
+  //   pathMatch: 'full'
+  // },
   // {
   //   path: 'mMultiSelect',
   //   component: MasterMultiSelectComponent,

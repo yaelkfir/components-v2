@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NavComponent} from './nav/nav.component';
 import {MasterTableComponent} from "../costume-masters/master-table/master-table.component";
 import {FullNameInputsComponent} from "../master-of-two-inputs/full-name-inputs/two-inputs.component";
+import {MasterGetComponent} from "../master-of-get/master-get-component/master-get-component";
 
 const appRoutes: Routes = [
   // {
@@ -23,8 +24,12 @@ const appRoutes: Routes = [
     component: NavComponent,
   },
   {
-    path: 'mTable',
+    path: 'master-of-inputs',
     component: FullNameInputsComponent,
+  },
+  {
+    path: 'master-of-get',
+    component: MasterGetComponent,
   },
   {path: '**', redirectTo: 'home'},
 ];

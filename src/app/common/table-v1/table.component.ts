@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {MovieModel} from '../models/movieModel';
 import {KeyModel} from './keyModel';
-import {SearchService} from '../../service/movie.service';
+import {Api} from '../../service/api.service';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class TableComponent implements OnInit, OnChanges {
     data: MovieModel
   };
 
-  constructor(private _searchService: SearchService) {
+  constructor(private _searchService: Api) {
   }
 
   ngOnInit() {

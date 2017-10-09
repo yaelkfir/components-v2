@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieModel} from '../../common/models/movieModel';
 import {KeyModel} from '../../common/table-v1/keyModel';
-import {SearchService} from '../../service/movie.service';
+import {Api} from '../../service/api.service';
 import {MasterTableService} from "app/costume-masters/master-table/master-table.service";
 
 @Component({
@@ -14,7 +14,7 @@ export class MasterTableComponent implements OnInit {
   resMovie: MovieModel[];
 
   constructor(
-    private _searchService: SearchService,
+    private _searchService: Api,
     private _TableService: MasterTableService
   ) {
   }
