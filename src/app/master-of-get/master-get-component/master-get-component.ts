@@ -3,6 +3,7 @@ import 'rxjs/Rx';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Api} from '../../service/api.service';
 
 @Component({
   selector: 'app-full-name-inputs',
@@ -11,15 +12,42 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 })
 export class MasterGetComponent implements OnInit {
 
-  constructor() {}
+  getlist = ['Space', 'Earth', 'Sun', 'moon', 'Saturn', 'Mars', 'Neptune', 'star'];
+  results = [];
 
+  isDone = false;
+  constructor(private api: Api) {
+  }
   ngOnInit() {
+    this.forkJoinGet();
+  }
+  forkJoinGet() {
+    const observableArr = [];
+    this.getlist.forEach((q) => {
+      console.log('push to forkJoin Observable');
+      observableArr.push(this.api.getMovies(q));
+    });
 
-
+    Observable.forkJoin(observableArr).subscribe((data) => {
+      data.map(m => this.results = [...m['results'], ...this.results]);
+      console.log(this.results, 'results works!');
+      this.isDone = true;
+    })
   }
 }
 
 /*
+
+const example = Rx.Observable
+  .zip(
+    sourceOne,
+    sourceTwo.delay(1000),
+    sourceThree.delay(2000),
+    sourceFour.delay(3000)
+  );
+//output: ["Hello", "World!", "Goodbye", "World!"]
+const subscribe = example.subscribe(val => console.log(val));
+
 
  buildManyInputs() {
     this.manyInputsArr.forEach(str => this.manyInputsObj[str] = '');

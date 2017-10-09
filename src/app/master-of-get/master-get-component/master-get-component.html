@@ -2,3 +2,6 @@
   master of get!
 </h1>
 
+<h1 *ngIf="!isDone">getting...</h1>
+<h1 *ngIf="isDone">Done!</h1>
+<p>got {{results.length}} movies from api</p>
