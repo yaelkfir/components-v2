@@ -1,11 +1,20 @@
-<p>
-  full-name-inputs works!
-</p>
+<h1>
+  master of inputs!
+</h1>
+<h3>marge 2 inputs</h3>
 <app-common-text-input
   (strValue)="handelInputs($event, 'one')"
   [label]="'input one'"></app-common-text-input>
 <app-common-text-input
   (strValue)="handelInputs($event , 'two')"
   [label]="'input two'"></app-common-text-input>
+<p>text:<span>{{twoInputsValue}}</span></p>
 
-<span *ngIf="twoInputsValue !== 'undefined'">{{twoInputsValue}}</span>
+
+  <h3>many inputs</h3>
+  <app-common-text-input *ngFor="let i of this.manyInputsArr"
+    (strValue)="handelInputs($event, i)"
+    [label]="''+  i + ''"></app-common-text-input>
+
+
+<p>many:<span>{{manyInputsValue}}</span></p>
