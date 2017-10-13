@@ -1,0 +1,83 @@
+//colors
+$main-black: #030113;
+$main-cyan: #18FFFF;
+$main-pink: #da0f6c;
+
+$lighter-gray:#f2f2f2;
+$light-gray:#87878c;
+$dark-gary:#45454a;
+
+$tile-border-color:#e5e5e7;
+$tile-shadow-color:#d4d4d4;
+
+//type
+$h-font: 'Montserrat', sans-serif;;
+$p-font: 'Open Sans', sans-serif;
+
+
+
+$border-radius: 1px solid $lighter-gray;
+
+$margin:30px;
+$padding:15px;
+
+/* --------------------------
+            grid
+-----------------------------
+
+12 column system
+
+break points:
+ 960,
+ 1280,
+ 1440,
+ 1600
+
+--------------------------- */
+
+
+$one-col:8.333333333333333%;
+$two-col:16.666666666666666%;
+$three-col:25%;
+$four-col:33.333333333333333%;
+$five-col:41.666666666666666%;
+$six-col:50%;
+$seven-col:58.333333333333333%;
+$eight-col:66.666666666666666%;
+$nine-col:75%;
+$ten-col:83.333333333333333%;
+$eleven-col:91.666666666666666%;
+$twelve-col:100%;
+
+
+
+@mixin set-wrap($margin,$padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin text-style($size,$line-height,$color) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin new-tile($padding,$margin) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin flex($direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+
+
+
+
+
+

@@ -7,11 +7,9 @@ export interface Filter {
   library: String
   offset?: number,
 }
-
-export interface MovieFilter extends Filter{
+export interface MovieFilter extends Filter {
   query?: String,
 }
-
 @Injectable()
 
 export class Api {
