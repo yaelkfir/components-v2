@@ -1,6 +1,8 @@
 <form [formGroup]="inputForm">
   <label>
-    <span *ngIf="label">{{label}}</span>
-    <input type="text" formControlName="q">
+    <span style="display: block" *ngIf="label">{{label}}</span>
+    <input type="text"
+           formControlName="q"
+           [class.err]="!validate && inputForm.touched">
   </label>
 </form>

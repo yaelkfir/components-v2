@@ -1,4 +1,4 @@
-import {Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, Renderer} from '@angular/core';
+import {Directive, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Http} from '@angular/http';
 
 @Directive({
@@ -14,7 +14,6 @@ export class BgImgDirective implements OnInit {
 
 
   ngOnInit() {
-
     this.src =  `url(https://image.tmdb.org/t/p/w300${this.img})`;
     this.elRef.nativeElement.style.backgroundImage = this.src;
     this.elRef.nativeElement.style.backgroundSize = 'cover';

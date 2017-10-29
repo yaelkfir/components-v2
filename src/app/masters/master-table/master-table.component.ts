@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MovieModel} from '../../common/models/movieModel';
 import {KeyModel} from '../../common/table-v1/keyModel';
 import {Api} from '../../service/api.service';
-import {MasterTableService} from "app/costume-masters/master-table/master-table.service";
+import {MasterTableService} from "app/masters/master-table/master-table.service";
 
 @Component({
   selector: 'app-master-table',

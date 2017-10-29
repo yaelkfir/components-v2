@@ -4,21 +4,23 @@ import 'rxjs/add/operator/debounceTime';
 
 
 @Component({
-  selector: 'app-common-text-input',
-  templateUrl: './common-text-input.component.html',
-  styleUrls: ['./common-text-input.component.css'],
+  selector: 'app-common-text-area',
+  templateUrl: './common-text-area.component.html',
+  styleUrls: ['./common-text-area.component.css'],
 })
-export class CommonTextInputComponent implements OnInit {
+export class CommonTextAreaComponent implements OnInit {
 
-  @Input() label: string;
+  @Input() label?: string;
   @Input() debounceTimer?: number;
   @Input() validate?: boolean;
+  @Input() initValue?: string;
   inputForm: FormGroup;
-  q = '';
+
   @Output() strValue: EventEmitter<string> = new EventEmitter<string>();
 
 
   constructor(private fb: FormBuilder) {
+
   }
 
   ngOnInit() {

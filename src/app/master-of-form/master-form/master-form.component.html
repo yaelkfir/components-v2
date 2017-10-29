@@ -1,0 +1,9 @@
+<h2>fill this card</h2>
+<section class="card-details">
+  <h3>form new card</h3>
+  <p>card creator and title</p>
+  <app-from-card [validate]="validate" (cardTitle)="updateCard($event)"></app-from-card>
+</section>
+<section class="text-form">
+  <app-common-card [cardTitle]="cardTitle" [cardAuthor]="cardAuthor"></app-common-card>
+</section>

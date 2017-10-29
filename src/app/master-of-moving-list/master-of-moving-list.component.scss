@@ -1,0 +1,46 @@
+:host{
+  display: block;
+  width: 100%;
+}
+
+main{
+  overflow: hidden;
+  width: 300vw;
+}
+//.card-container{
+//  width: 16vw;
+//  height: 24vw;
+//  display: inline-flex;
+//  padding:10px;
+//  position: absolute;
+//  top:200px;
+//  left: -16vw;
+//  //transform: translateX(120vw);
+//  //transition: all 60s ease;
+//
+//  animation-name: a-to-b;
+//  animation-duration: 8s;
+//  animation-timing-function: linear;
+//}
+
+/* The animation code */
+@keyframes a-to-b {
+  0%   {transform: translateX(0) }
+  100% {transform: translateX(calc(100vw + 16vw))}
+}
+
+
+
+
+ul{
+  display: inline-flex;
+}
+
+
+.now{
+  background-color: #da0f6c;
+}
+
+.next{
+  background-color: #87878c;
+}

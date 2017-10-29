@@ -11,14 +11,16 @@ import {AppComponent} from './app-component/app.component';
 import {NavComponent} from './routing/nav/nav.component';
 import {AppRoutingModule} from './routing/app-routing.module';
 import {RouterModule} from '@angular/router';
-import {MasterTableComponent} from './costume-masters/master-table/master-table.component';
+import {MasterTableComponent} from './masters/master-table/master-table.component';
 import {Api} from 'app/service/api.service';
 import {TableComponent} from './common/table-v1/table.component';
 import {TableDataComponent} from './common/table-v1/table-cell/table-data.component';
-import {MasterTableService} from './costume-masters/master-table/master-table.service';
-import {MasterOfTwoInputsModule} from "./master-of-two-inputs/master-of-two-inputs.module";
-import {MasterOfGetModule} from "./master-of-get/master-of-get.module";
-
+import {MasterTableService} from './masters/master-table/master-table.service';
+import {MasterOfTwoInputsModule} from './master-of-two-inputs/master-of-two-inputs.module';
+import {MasterOfGetModule} from './master-of-get/master-of-get.module';
+import {MasterOfFormModule} from './master-of-form/master-of-form.module';
+import { MasterOfMovingListComponent } from './master-of-moving-list/master-of-moving-list.component';
+import {MasterOfMovingListModule} from "./master-of-moving-list/master-of-moving-list.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import {MasterOfGetModule} from "./master-of-get/master-of-get.module";
     NavComponent,
     MasterTableComponent,
     TableComponent,
-    TableDataComponent,
+    TableDataComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,9 @@ import {MasterOfGetModule} from "./master-of-get/master-of-get.module";
     RouterModule,
     AppRoutingModule,
     MasterOfTwoInputsModule,
-    MasterOfGetModule
+    MasterOfGetModule,
+    MasterOfFormModule,
+    MasterOfMovingListModule
   ],
   providers: [
     Api,

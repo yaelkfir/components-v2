@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 // import {MultiSelectionComponent} from '../common/multi-selection/multi-selection.component';
 import {NavComponent} from './nav/nav.component';
-import {MasterTableComponent} from "../costume-masters/master-table/master-table.component";
+import {MasterTableComponent} from "../masters/master-table/master-table.component";
 // import {MyFormComponent} from '../my-form/my-form.component';
 // import {TableComponent} from '../common/table-v1/table.component';
 // import {TableTwoComponent} from '../common/table-v2/table.component';

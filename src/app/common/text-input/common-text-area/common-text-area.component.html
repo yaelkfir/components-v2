@@ -1,0 +1,8 @@
+<form [formGroup]="inputForm">
+  <label *ngIf="label">
+    <span style="display: block" *ngIf="label">{{label}}</span>
+    <textarea cols="30" rows="10"
+              formControlName="q"
+              [class.err]="!validate && inputForm.touched"></textarea>
+  </label>
+</form>

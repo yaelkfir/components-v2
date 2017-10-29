@@ -14,7 +14,68 @@ import {Color} from './color.interface';
 
 export class MasterGetComponent implements OnInit {
 
-  getlist = ['Space', 'Earth', 'Sun', 'moon', 'Saturn', 'Mars', 'Neptune', 'Space', 'Space', 'Earth', 'Sun', 'moon', 'Saturn', 'Mars', 'Neptune', 'Space', 'Earth', 'Sun', 'moon', 'Saturn', 'Mars', 'Neptune', 'star', 'gun', 'fun', 'number', 'best', 'fast', 'hit', 'proce'];
+  getlist = ['Space',
+    'Earth',
+    'Sun',
+    'moon',
+    'Saturn',
+    'Mars',
+    'Neptune',
+    'Space',
+    'Space',
+    'Earth',
+    'Sun',
+    'moon',
+    'Saturn',
+    'Mars',
+    'Neptune',
+    'Space',
+    'Earth',
+    'Sun',
+    'moon',
+    'Saturn',
+    'Mars',
+    'Neptune',
+    'star',
+    'gun',
+    'fun',
+    'number',
+    'best',
+    'fast',
+    'hit',
+    'batman',
+    'hero',
+    'Earth',
+    'Sun',
+    'moon',
+    'Saturn',
+    'Mars',
+    'Neptune',
+    'Space',
+    'Space',
+    'Earth',
+    'Sun',
+    'moon',
+    'Saturn',
+    'Mars',
+    'Neptune',
+    'Space',
+    'Earth',
+    'Sun',
+    'moon',
+    'Saturn',
+    'Mars',
+    'Neptune',
+    'star',
+    'gun',
+    'fun',
+    'number',
+    'best',
+    'fast',
+    'hit',
+    'batman',
+    'hero'
+  ];
   results = [];
   colors: Color[];
   colorI = -1;
@@ -95,6 +156,11 @@ export class MasterGetComponent implements OnInit {
     const color = this.hsvToRgb(hue, s, v);
     return `rgba(${color[0]},${color[1]},${color[2]}, 0.6)`
   }
+
+  /*
+  i want h between 230 - 250
+  i want s to be
+   */
 
   hsvToRgb(h, s, v) {
 
