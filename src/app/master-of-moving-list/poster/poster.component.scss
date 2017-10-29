@@ -19,10 +19,23 @@ li {
 /* The animation code */
 @keyframes a-to-b {
   0%{
-    transform: translateX(-130vw) translateY(0vw);
+    transform: translateX(-130vw) translateY(-5vw);
+    width: 25vw;
   }
-  1%{
+  5%{
     transform: translateX(-115vw) translateY(0vw);
+    width: 25vw;
+
+  }
+  12%{
+    width: 25vw;
+    transform: translateX(-115vw) translateY(0vw);
+
+  } 
+  20%{
+    transform: translateX(-90vw) translateY(0vw);
+    width: 15vw;
+
   }
   100%{
     transform: translateX(0) translateY(0vw);
