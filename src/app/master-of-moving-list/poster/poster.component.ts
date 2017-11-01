@@ -9,12 +9,16 @@ import {ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, OnInit
 export class PosterComponent implements OnInit {
   className: string;
   n: any;
+  imgUrl: string;
+
   @Input('n')
   set setN(value) {
 
 if (value) {
     this.n = value;
-}
+    console.log(value, 'value');
+    this.imgUrl = `http://image.tmdb.org/t/p/w300${this.n.poster_path}`
+    }
   }
   constructor() { }
 

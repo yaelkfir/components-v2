@@ -1,6 +1,6 @@
 <main>
   <h1>moving movie list</h1>
-  <ul *ngIf="movieList.length > 21">
+  <ul>
       <app-poster *ngFor="let n of movieList" [n]="n"></app-poster>
   </ul>
 </main>

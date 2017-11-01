@@ -25,7 +25,10 @@ main{
 
 /* The animation code */
 @keyframes a-to-b {
-  0%   {transform: translateX(0) }
+  0%   {
+    transform: translateX(0);
+    display: none;
+  }
   100% {transform: translateX(calc(100vw + 16vw))}
 }
 
